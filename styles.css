@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+#background {
+  position: absolute;
+  width: 1200px;
+  height: 800px;
+  z-index: -1;
+  object-fit: cover;
+}
+#overlay {
+  position: absolute;
+  width: 1200px;
+  height: 800px;
+  z-index: 2;
+  filter: brightness(0.5);
+}
+
+#Startmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#startKnapp {
+  padding: 10px 20px;
+  height: 4rem;
+  background-color: rgb(12, 180, 12);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.387);
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: scale 0.15s;
+}
+#startKnapp:hover {
+  scale: 1.1;
+  font-weight: bold;
+}
+
+/*
+#title {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+
+  font-family: "Dancing Script";
+  font-size: 5rem;
+
+  background: -webkit-linear-gradient(rgb(5, 230, 54), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+*/
+
+#player-name {
+  position: relative;
+  height: 3rem;
+  border-radius: 1.5rem;
+
+  border: none;
+  top: 10px;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.level-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.level {
+  padding: 10px 20px;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: rgb(36, 36, 36);
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.387);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 50px 20px;
+}
+.level:hover {
+  scale: 1.1;
+}
+.normal-level {
+  scale: 1.1;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  transition: opacity 0.15s;
+}
+.hard-level {
+  scale: 1.1;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  transition: opacity 0.15s;
+}
+.extreme-level {
+  scale: 1.1;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  transition: opacity 0.15s;
+}
+.normal-level:hover,
+.hard-level:hover,
+.extreme-level:hover {
+  opacity: 0.9;
+}
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.286);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#restart-btn {
+  width: 240px;
+  height: 4rem;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  background-color: rgb(12, 180, 12);
+  box-shadow: 0px 0px 15px rgb(12, 180, 12);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 15px;
+  transition: scale 0.15s;
+}
+
+#new-game-btn {
+  width: 240px;
+  height: 4rem;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  background-color: rgb(12, 180, 12);
+  box-shadow: 0px 0px 15px rgb(12, 180, 12);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 15px;
+  transition: scale 0.15s;
+}
+
+#restart-btn:hover,
+#new-game-btn:hover {
+  scale: 1.1;
+  opacity: 0.9;
+}
+
+#restart-btn:active,
+#new-game-btn:active {
+  scale: 1.2;
+  opacity: 0.7;
+}
+
+#hurt {
+  display: none;
+  background-color: red;
+  opacity: 0.4;
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+}
